@@ -4,6 +4,7 @@ resource "google_compute_region_instance_group_manager" "appserver" {
 
   base_instance_name = "app"
   region               = "us-central1"
+  distribution_policy_zones  = ["us-central1-a", "us-central1-c"]
 
   target_size = 1
 

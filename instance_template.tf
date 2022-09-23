@@ -45,12 +45,12 @@ resource "google_compute_instance_template" "default" {
   }
 
     // Use an existing disk resource
- # disk {
+  disk {
     // Instance Templates reference disks by name, not self link
- #   source      = google_compute_region_disk.regiondisk.name
-#    auto_delete = false
- #   boot        = false
- # }
+    source      = google_compute_region_disk.regiondisk.name
+    auto_delete = false
+    boot        = false
+  }
 
   network_interface {
     network = "projects/d1-nw-dev-net-spoke-0/global/networks/dev-spoke-0"
