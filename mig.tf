@@ -1,9 +1,9 @@
-resource "google_compute_instance_group_manager" "appserver" {
+resource "google_compute_region_instance_group_manager" "appserver" {
   provider = google-beta
   name     = "appserver-igm"
 
   base_instance_name = "app"
-  zone               = "us-central1-a"
+  region               = "us-central1"
 
   target_size = 1
 
